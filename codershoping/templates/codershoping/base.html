@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> 
+                    <a href={% url 'inicio' %} >Inicio</a>
+                </li>
+                <li> 
+                    <a href={% url 'productos' %}>Productos</a>
+                </li>
+                <li> 
+                    <a href={% url 'carrito' %}>Carrito</a>
+                </li>
+                <li> 
+                    <a href={% url 'contacto' %}>Contacto</a>
+                </li>
+                <li> 
+                    <a href={% url 'buscar' %}>Buscar</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    {% block index %}{% endblock index %}
+    {% block products %}{% endblock products %}
+    {% block cart %}{% endblock cart %}
+    {% block contact %}{% endblock contact %}
+    {% block search %}{% endblock search %}
+    {% block search_result %}{% endblock search_result %}
+</body>
+</html>
