@@ -35,8 +35,34 @@ li{
 }
 main{
     padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+h3{
+    font-size: 2em;
+}
+input{
+    margin: 1em;
+    width: 50%;
+}
+input[type="submit"]{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
 
+}
+input[type="submit"]:hover{
+    background-color: brown;
+    color: white;
+    transform: scale(1.1);
+
+}
 .home{
     display: flex;
     justify-content: center;
@@ -57,9 +83,20 @@ main{
 
 
 .box{
-    width: 10em;
+    min-width: 10em;
     min-height: 8em;
     margin: 10px;
     padding: 1em;
     border: 1px solid blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }

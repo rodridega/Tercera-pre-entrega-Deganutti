@@ -2,13 +2,15 @@
 
 {% block cart %}
     <h3> Lista de Carritos</h3>
+    <div class="products-list">
 
-    {% for cart in carts %}
-    <div class="box">
-        <p> {{cart.product}} </p>
-        <p> {{cart.quantity}} </p>
-
-    </div>
-</hr>
-{% endfor %}
+        {% for cart in carts %}
+        <div class="box">
+            <p> {{cart.product}} </p>
+            <p> {{cart.quantity}} </p>
+            
+        </div>
+    
+    {% endfor %}
+</div>
 {% endblock cart %}

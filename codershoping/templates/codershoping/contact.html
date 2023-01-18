@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
 {% block contact %}
-    
+
 <h3>Contactos</h3>
+<div class="products-list">
 
-{% for contact in contacts %}
+    {% for contact in contacts %}
     <div class="box">
-
         <p> {{contact.name}} </p>
         <p> {{contact.message}} </p>
         <p> {{contact.email}} </p>
     </div>
     </hr>
-{% endfor %}
+    {% endfor %}
+</div>
 {% endblock contact %}

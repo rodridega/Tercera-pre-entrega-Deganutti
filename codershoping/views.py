@@ -52,7 +52,7 @@ def new_contact(request):
             contact = Contact(name=data['name'], email=data['email'], message=data['message'])
             contact.save()
             success = reverse('contacto')
-            return redirect(success)
+            return render(request=request, template_name='contact_form.html')
         
     else:
         formulario = ContactForm()
