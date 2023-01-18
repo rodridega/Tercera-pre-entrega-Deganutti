@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    min-height: 100vh;
+    background-color: gainsboro;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    min-height: 3em;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin: 0em 2em 
+}
+
+li{
+    list-style: none;
+}
+main{
+    padding: 2em;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1{
+    font-size: 5em;
+}
+
+
+.products-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.box{
+    width: 10em;
+    min-height: 8em;
+    margin: 10px;
+    padding: 1em;
+    border: 1px solid blueviolet;
+}

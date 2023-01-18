@@ -7,7 +7,7 @@ class Product(models.Model):
     price = models.IntegerField()
 
 class Cart(models.Model):
-    product = models.IntegerField()
+    product = models.CharField(max_length=255)
     quantity = models.IntegerField()
 
 class Contact(models.Model):

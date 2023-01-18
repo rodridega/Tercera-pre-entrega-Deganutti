@@ -1,20 +1,16 @@
 from django import forms
-from .models import Product, Cart, Contact
 
-class ProductForm(forms.ModelForm):
-    class Meta:
-        model = Product
-        fields = ('name', 'description', 'price')
+class ProductForm(forms.Form):
+        name=forms.CharField()
+        description=forms.CharField()
 
-class CartForm(forms.ModelForm):
-    class Meta:
-        model = Cart
-        fields = ('product', 'quantity')
+class CartForm(forms.Form):
+        product=forms.CharField()
+        quantity=forms.IntegerField()
+    
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=255)
+    email= forms.EmailField(max_length=254)
+    message = forms.CharField(max_length=255)
 
-class ContactForm(forms.ModelForm):
-    class Meta:
-        model = Contact
-        fields = ('name', 'email', 'message')
 
-class SearchForm(forms.Form):
-    query = forms.CharField(label='Buscar', max_length=100)

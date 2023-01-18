@@ -1,0 +1,14 @@
+{%  extends 'base.html' %}
+
+{% block product_search %}
+<h2>Buscar producto</h2>
+
+<form action={% url 'resultado_busqueda' %} method="GET">
+
+    <input type="text" name="name" id="product">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock product_search %}

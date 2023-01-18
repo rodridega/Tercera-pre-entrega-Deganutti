@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block cart %}
-    <h3>Carrito</h3>
+    <h3> Lista de Carritos</h3>
 
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Save">
-    </form>
+    {% for cart in carts %}
+    <div class="box">
+        <p> {{cart.product}} </p>
+        <p> {{cart.quantity}} </p>
+
+    </div>
+</hr>
+{% endfor %}
 {% endblock cart %}

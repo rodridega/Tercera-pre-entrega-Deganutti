@@ -1,15 +1,18 @@
-{%  extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block products %}
-    <div>
-        <h3> Agregar un Producto a la BD </h3>    
+<div>
+    <h3> Lista de productos </h3>
+</div>
+<ul class="products-list">
+    {% for product in products %}
+    <div class="box">
+        <li> {{product.name}} / ${{product.price}} </li>
+        </hr>
+        <li>
+            Descripcion: {{product.description}}
+        </li>
     </div>
-
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Guardar">
-    </form>
-
+    {% endfor %}
+</ul>
 {% endblock products %}
-

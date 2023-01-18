@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block contact_form %}
+
+    <form action={% url 'nuevo_contacto' %} method='POST'>
+        {% csrf_token %}
+
+        {{formulario}}
+
+        <input type="submit" value="Guardar" />
+    </form>
+
+
+
+{% endblock contact_form %}

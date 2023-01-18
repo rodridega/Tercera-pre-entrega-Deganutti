@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block product_results %}
+<h2>Productos Buscados</h2>
+
+{% if products %}
+
+<ul>
+    {% for product in products %}
+    <div>
+        <li> {{product.name}} / ${{product.price}} </li>
+        <p>Info: {{product.description}} </p>
+    </div>
+    {% endfor %}
+</ul>
+
+{% endif %}
+{% endblock product_results %}
