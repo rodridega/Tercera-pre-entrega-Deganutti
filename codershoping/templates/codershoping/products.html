@@ -4,6 +4,7 @@
 <div>
     <h3> Lista de productos </h3>
 </div>
+<a href={% url 'crear_producto' %}>Crear un Producto</a>
 <ul class="products-list">
     {% for product in products %}
     <div class="box">
@@ -12,7 +13,13 @@
         <li>
             Descripcion: {{product.description}}
         </li>
+        <button>
+            <a href={% url 'eliminar_producto' product.name %} >Eliminar  </a> / 
+            <a href={% url 'editar_producto' product.name %} >Editar  </a>  
+
+        </button>
     </div>
+    
     {% endfor %}
 </ul>
 {% endblock products %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block contact_delete %}
+
+    <h2>Estas seguro de eliminar el Contacto: {{contact.name}} ?</h2>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <input type="submit" action="" value="Borrar" >
+
+    </form>
+
+{% endblock contact_delete %}

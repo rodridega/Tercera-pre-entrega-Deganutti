@@ -26,13 +26,13 @@
                     <a href={% url 'carrito' %}>Carritos</a>
                 </li>
                 <li>
-                    <a href={% url 'contacto' %}>Contactos</a>
+                    <a href={% url 'contact_list' %}>Contactos</a>
                 </li>
                 <li>
                     <a href={% url 'crear_producto' %}>Crear Producto</a>
                 </li>
                 <li>
-                    <a href={% url 'nuevo_contacto' %}>Nuevo Contacto</a>
+                    <a href={% url 'contact_create' %}>Nuevo Contacto</a>
                 </li>
                 <li>
                     <a href={% url 'nuevo_carrito' %}>Nuevo Carrito</a>
@@ -40,6 +40,18 @@
                 <li>
                     <a href={% url 'buscar_producto' %}>Buscar Producto</a>
                 </li>
+                {% if not request.user.is_authenticated %}
+                <li>
+                    <a href={% url 'login' %}>Login</a>
+                </li>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                <p style="margin: 5px;">
+                    Hola, {{user.username}}
+                    
+                </p>
+                <img height="40" src="{{url}}" alt="">
+                {% endif %}
             </ul>
         </nav>
 
@@ -56,6 +68,12 @@
         {% block contact_form %}{% endblock contact_form %}
         {% block product_search %}{% endblock product_search %}
         {% block product_results %}{% endblock product_results %}
+        {% block update_product %}{% endblock update_product %}
+        {% block contact_detail %}{% endblock contact_detail %}
+        {% block contact_delete %}{% endblock contact_delete %}
+        {% block editar_perfil %}{% endblock editar_perfil %}
+        {% block login %}{% endblock login %}
+
     </main>
 </body>
 

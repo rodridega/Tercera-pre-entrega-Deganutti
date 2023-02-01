@@ -2,14 +2,12 @@
 
 {% block contact_form %}
 
-    <form action={% url 'nuevo_contacto' %} method='POST'>
+    <form action="" method='post'>
         {% csrf_token %}
 
-        {{formulario}}
+        {{form.as_p}}
 
         <input type="submit" value="Guardar" />
     </form>
-
-
 
 {% endblock contact_form %}

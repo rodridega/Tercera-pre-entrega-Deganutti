@@ -6,7 +6,7 @@
 }
 body{
     min-height: 100vh;
-    background-color: gainsboro;
+    background-color: #24292f   ;
 }
 
 ul{
@@ -63,8 +63,20 @@ input[type="submit"]:hover{
     transform: scale(1.1);
 
 }
+
+button{
+    background-color: brown;
+    border: none;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+label{
+    color: gainsboro;
+}
 .home{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -92,6 +104,9 @@ input[type="submit"]:hover{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    background-color: gainsboro;
+    box-shadow: 1px 1px 3px 1px white;
+    box-shadow: inset 1px 1px 5px brown;
 }
 form{
     display: flex;

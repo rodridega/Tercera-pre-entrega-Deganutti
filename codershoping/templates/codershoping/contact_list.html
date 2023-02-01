@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block contact %}
+
+<h1>Contactos</h1>
+
+<ul>
+    {% for contact in object_list %}
+    <div class="box">
+        <li>
+            <p>Nombre: {{contact.name}} </p>
+            <p>
+                <a href="{% url 'contact_detail' contact.id %}">Ver</a>
+                <a href="{% url 'contact_update' contact.id %}">Editar</a>
+                <a href="{% url 'contact_delete' contact.id %}">Borrar</a>
+            </p>
+        </li>
+    </div>
+    {% endfor %}
+</ul>
+{% endblock contact %}

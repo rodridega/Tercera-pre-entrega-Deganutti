@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block update_product %}
+
+    <h1>Editar Producto</h1>
+    
+    {% if my_form.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+        
+        <table>
+
+            {{ my_form }}
+
+        </table>
+
+        <input type="submit", value="Guardar">
+
+    </form>
+
+
+{% endblock update_product %}
+
