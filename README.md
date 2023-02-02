@@ -1,5 +1,7 @@
 # Tercera pre-entrega + Deganutti
 
+## Alumno: Deganutti Rodrigo
+
 ## Paso a paso para el uso de la aplicación
 
 1. Clonar el repositorio con la consola: git clone https://github.com/rodridega/tercera-pre-entrega-deganutti.git
@@ -12,10 +14,11 @@
 
 5. En el navegador, entrar al link: http://127.0.0.1:8000/
 
-6. Ya dentro de la Coder Store, puede navegar entre las distintos templates
+## Descripción
 
-7. Listas de Productos, carritos y contactos en base de datos
+Web E-comerce que cuenta con una home, barra de navegación para ir a secciones de productos, carritos y contactos.
+En cada seccion se listas los items correspondientes, con la posibilidad de hacer CRUD en productos y contactos.
 
-8. Se puede ademas Crear un producto, un carrito o un contacto y guardarlo en DB.
+## Casos de prueba
 
-9. Con el ultimo enlace, "Buscar Producto", se puede completar el input y buscar en la base de datos la informacion de ese producto.
+Link: https://docs.google.com/spreadsheets/d/1C23jsFWUXSiXCPIUbKLskITGOEZm056in-EIqjz7Syg/edit?usp=sharing

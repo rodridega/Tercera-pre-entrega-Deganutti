@@ -190,15 +190,10 @@ def editarPerfil(request):
 
             usuario.save()
 
-            return render(request, "index.html")
+            return render(request, "index.html", {"mensaje": "Usuario editado correctamente!"})
 
     else:
 
         miFormulario = UserEditForm(initial={'email': usuario.email})
 
     return render(request, "editar_perfil.html", {"miFormulario": miFormulario, "usuario": usuario})
-
-@login_required
-def agregarAvatar(request):
-    if request.method == "POST":
-        miFormulario = AvatarFormulario(request.POST, request.FILES)

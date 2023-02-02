@@ -18,9 +18,9 @@ urlpatterns = [
     path(r'^nuevo$', ContactCreate.as_view(), name='contact_create'),
     path(r'^editar$/(?P<pk>\d+)$', ContactUpdate.as_view(), name='contact_update'),
     path(r'^borrar$/(?P<pk>\d+)$', ContactDelete.as_view(), name='contact_delete'),
-    path('login/', login_request, name= "login"),
-    path('register/', register, name= "register"),
-    path('logout/', LogoutView.as_view(template_name='logout.html'), name= "logout"),
-    path('editarPerfil/', editarPerfil, name= "editarPerfil"),
+    path('accounts/login/', login_request, name= "login"),
+    path('accounts/register/', register, name= "register"),
+    path('accounts/logout/', LogoutView.as_view(template_name='logout.html'), name= "logout"),
+    path('accounts/editarPerfil/', editarPerfil, name= "editarPerfil"),
 
 ]

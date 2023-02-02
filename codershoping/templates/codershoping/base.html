@@ -43,14 +43,22 @@
                 {% if not request.user.is_authenticated %}
                 <li>
                     <a href={% url 'login' %}>Login</a>
+                    <a href={% url 'register' %}>Registrarse</a>
                 </li>
                 {% endif %}
                 {% if request.user.is_authenticated %}
-                <p style="margin: 5px;">
-                    Hola, {{user.username}}
-                    
-                </p>
-                <img height="40" src="{{url}}" alt="">
+                <div>
+                    <p style="margin: 5px;">
+                        Hola, {{user.username}}
+                    </p>
+                    <img height="40" src="{{url}}" alt="">
+                </div>
+                <li>
+                    <a href={% url 'editarPerfil' %}>Editar perfil</a>
+                </li>
+                <li>
+                    <a href={% url 'logout' %}>Cerrar sesion</a>
+                </li>
                 {% endif %}
             </ul>
         </nav>
