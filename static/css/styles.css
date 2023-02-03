@@ -84,9 +84,7 @@ label{
 .home h1{
     font-size: 5em;
 }
-p{
-    color: white;
-}
+
 
 .products-list{
     display: flex;

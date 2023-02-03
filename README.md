@@ -22,3 +22,7 @@ En cada seccion se listas los items correspondientes, con la posibilidad de hace
 ## Casos de prueba
 
 Link: https://docs.google.com/spreadsheets/d/1C23jsFWUXSiXCPIUbKLskITGOEZm056in-EIqjz7Syg/edit?usp=sharing
+
+## Video explicando la web
+
+Link: https://drive.google.com/file/d/1e5Jrw65CyUkS0PG2KWCm5EbPvOQ50TnG/view?usp=sharing
